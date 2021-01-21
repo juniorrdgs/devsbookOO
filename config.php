@@ -2,7 +2,7 @@
 session_start();
 $base = 'http://localhost/devsbookoo';
 
-$db_name = 'devsbook';
+$db_name = 'devsbookoo';
 $db_host = 'localhost';
 $db_user = 'root';
 $db_pass = '';

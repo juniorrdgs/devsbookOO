@@ -66,7 +66,7 @@ class UserDaoMysql implements UserDAO {
             work = :work,
             avatar = :avatar,
             cover = :cover,
-            token = :token,
+            token = :token
             WHERE id = :id");
 
         $sql->bindValue(':email', $u->email);
