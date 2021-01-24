@@ -9,6 +9,21 @@
                         <div class="feed-new-send">
                             <img src="<?=$base;?>/assets/images/send.png" />
                         </div>
+                        <form class="feed-new-form" method="POST" action="<?=$base;?>/feed_editor_action.php">
+                            <input type="hidden" name="body" />
+                        </form>
                     </div>
                 </div>
             </div>
+            <script>
+            let feedInput = document.querySelector('.feed-new-input');
+            let feedSubmit = document.querySelector('.feed-new-send');
+            let feedForm = document.querySelector('.feed-new-form');
+
+            feedSubmit.addEventListener('click', function(){
+                let value = feedInput.innerText.trim();
+
+                feedForm.querySelector('input[name=body').value = value;
+                feedForm.submit();
+            });
+            </script>
